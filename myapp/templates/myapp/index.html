@@ -1,59 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="django form with utf-8">
-    <meta name="author" content="wichit2s">
-    <title>Linux Services</title>
-
-    {% load static %}
-    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
-
+    <title>index</title>
     <style>
-      .filled {
-        width: 80%;
-        padding: 5px;
-      }
-      .spacing {
-        padding: 1em;
-      }
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: consolas;
+}
+
+.container{
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .card{
+    position: relative;
+    cursor: pointer;
+}
+
+.container .card .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.container .card .face.face1{
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container .card:hover .face.face1{
+    background: #ff0057;
+    transform: translateY(0);
+}
+
+.container .card .face.face1 .content{
+    opacity: 0.2;
+    transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content{
+    opacity: 1;
+}
+
+.container .card .face.face1 .content img{
+    max-width: 100px;
+}
+
+.container .card .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.container .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.container .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.container .card .face.face2 .content a:hover{
+    background: #333;
+    color: #fff;
+}
+.font{
+  font-family: Anakotmai;
+}
+/* /////////////////////////////////// */
+
+.loader {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: linear-gradient(#f07e6e, #84cdfa, #5ad1cd);
+    animation: animate 1.2s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(#f07e6e, #84cdfa, #5ad1cd);
+}
+
+.loader span:nth-child(1) {
+    filter: blur(5px);
+}
+
+.loader span:nth-child(2) {
+    filter: blur(10px);
+}
+
+.loader span:nth-child(3) {
+    filter: blur(25px);
+}
+
+.loader span:nth-child(4) {
+    filter: blur(50px);
+}
+
+.loader:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: #f1f1f1;
+    border: solid white 10px;
+    border-radius: 50%;
+}
     </style>
   </head>
   <body>
-    <nav> <h1> Linux Services Page </h1> </nav>
-    <div>
-      <section class="filled">
-        <form action="index" method="POST" enctype="multipart/form-data;charset=UTF-8">
-          {% csrf_token %}
-          <div class="spacing"><input class="filled" type="text" name="icon" value="icon ไอคอน"/></div>
-          <div class="spacing"><input class="filled" type="text" name="title" value="title บริการ"/></div>
-          <div class="spacing"><input class="filled" type="text" name="detail" value="detail รายละเอียด"/></div>
-          <div class="spacing"><button style="padding: 2em;" type="submit">Submit</button></div>
-        </form>
-      </section>
-      <div>
-       <table style="width:80%; border: 1px solid black; padding: 1em;">
-        <tr>
-          <th>Icon</th>
-          <th>Title</th>
-          <th>Detail</th>
-        </tr>
-        {% for s in services %}
-        <tr>
-          <td> <i class="fa {{s.icon}}"></i> {{ s.icon }}</td>
-          <td>{{ s.title }}</td>
-          <td>{{ s.detail }}</td>
-        </tr>
-        {% endfor %}
-      </table> 
-      </div>
-    </div>
-    <footer>
-      <div>
-        <div>Copyright &copy; 2019 </div>
-      </div>
-    </footer>
-  </body>
 
+
+      <div class="container">
+          <div class="card">
+              <div class="face face1">
+                  <div class="content">
+                      <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/design_128.png?raw=true">
+                      <h3>Memo</h3>
+                  </div>
+              </div>
+              <div class="face face2">
+                  <div class="content">
+                      <p style="font-family: Anakotmai;">สมุดบันทึกเตือนความจำเกี่ยวกับงานหรือจะเป็นสมุดบันทึกความทรงจำที่ดีที่อยากจะแชร์ให้ผู้อื่นได้รับรู้เรื่องราวเกี่ยวกับตัวคุณ</p>
+                          <a href="Memo"><font style="font-family: Anakotmai;">ดูเพิ่มเติม </font></a>
+                  </div>
+              </div>
+          </div>
+
+          <div class="card">
+              <div class="face face1">
+                  <div class="content">
+                      <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/code_128.png?raw=true">
+                      <h3>Comsci</h3>
+                  </div>
+              </div>
+              <div class="face face2">
+                  <div class="content">
+                      <p style="font-family: Anakotmai;">รูปภาพกิจกรรมเกี่ยวกับสาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยอุบลราชธานีและช่องทางการติดต่อ สาขาวิทยาการคอมพิวเตอร์(ComputerScience)</p>
+                          <a href="#"><font style="font-family: Anakotmai;">ดูเพิ่มเติม </font></a>
+                  </div>
+              </div>
+          </div>
+
+
+          <div class="card">
+              <div class="face face1">
+                  <div class="content">
+                      <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/launch_128.png?raw=true">
+                      <h3>Developer</h3>
+                  </div>
+              </div>
+              <div class="face face2">
+                  <div class="content">
+                      <p style="font-family: Anakotmai;">นายพงศ์คเณศ แก้วฤทธิ์ &emsp;&emsp;&emsp;นักศึกษามหาวิทยาลัยอุบลราชธานี &emsp;คณะวิทยาศาสตร์ สาขาวิทยาการคอมพิวเตอร์ (ComputerScience)</p>
+                          <a href="Developer"><font style="font-family: Anakotmai;">ดูเพิ่มเติม </font></a>
+                    </div>
+              </div>
+          </div>
+      </div>
+    
+
+
+
+</body>
 </html>

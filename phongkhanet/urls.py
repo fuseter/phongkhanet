@@ -21,4 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', appview.index),
     path('index', appview.index),
+    path('Developer', appview.Developer),
+    path('comsci', appview.comsci),
+    path('Memo', appview.Memo),
 ]
