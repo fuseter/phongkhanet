@@ -6,84 +6,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Comsci</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-        body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #f1f1f1;
-}
-
-.loader {
-    position: relative;
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    background: linear-gradient(#f07e6e, #84cdfa, #5ad1cd);
-    animation: animate 1.2s linear infinite;
-}
-
-@keyframes animate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.loader span {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: linear-gradient(#f07e6e, #84cdfa, #5ad1cd);
-}
-
-.loader span:nth-child(1) {
-    filter: blur(5px);
-}
-
-.loader span:nth-child(2) {
-    filter: blur(10px);
-}
-
-.loader span:nth-child(3) {
-    filter: blur(25px);
-}
-
-.loader span:nth-child(4) {
-    filter: blur(50px);
-}
-
-.loader:after {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    background: #f1f1f1;
-    border: solid white 10px;
-    border-radius: 50%;
-}
-    
+        body,h1 {font-family: "Raleway", Arial, sans-serif}
+        h1 {letter-spacing: 6px}
+        .w3-row-padding img {margin-bottom: 12px}
     
     </style>
 </head>
-
 <body>
-    <div class="loader">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</body>
+    <!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
 
+        <!-- Header -->
+        <header class="w3-panel w3-center w3-opacity" style="padding:128px 16px">
+          <h1 class="w3-xlarge">gallery</h1>
+          <h1>Computer science Ubon Ratchathani University</h1>
+        </header>
+        
+        <!-- Photo Grid -->
+        <div class="w3-row-padding w3-grayscale" style="margin-bottom:128px">
+          <div class="w3-half">
+            <img src="https://scontent.fubp1-1.fna.fbcdn.net/v/t1.0-9/39665593_1810841612305109_6590447472546414592_o.jpg?_nc_cat=102&_nc_eui2=AeGkNIiJ5nvfOywia9i3jLCTUEJycqJHAKSSYZk53z1r6-vZrua5Y-y-tSnln2cK0M1usA1286axPWs0KmlaV_KEQ2xatQ84oFYwkj_dj0ZGgw&_nc_oc=AQnfMEB1ap4X9RfiDSBWfnlBG7Z4n9_5MQIDd4KRwMY2vBQzSQCqs2viiPqNUGl0Sks&_nc_ht=scontent.fubp1-1.fna&oh=db3067cfe2371a1e352a5a339222380d&oe=5E1E6E74" style="width:100%">
+            <img src="https://scontent.fubp1-1.fna.fbcdn.net/v/t1.0-9/40209962_1823246497731287_5060233238677553152_o.jpg?_nc_cat=111&_nc_eui2=AeFiUWi52idjFiXmZscHm5Bc9ajwS_QErSN23X7UXr8ZBF89TMqi5zzCzUw1tkKmBLjtgKyrgT-wEyfM_VzoRKDuoHvjOkXJGLb-xGmhV6iTgg&_nc_oc=AQkNjmDiBYLgAGzhGg3G3OeoHP9Q7aD030WlqXBxgB0XWz2hzGxOLHfXRM3iGaROw3A&_nc_ht=scontent.fubp1-1.fna&oh=1cba20a0e504fd3e2cf048b03733bb16&oe=5E55E319" style="width:100%">
+            <img src="https://scontent.fubp1-1.fna.fbcdn.net/v/t1.0-9/39557730_1810841562305114_7838583913864757248_o.jpg?_nc_cat=107&_nc_eui2=AeGGCwbHd3Y4nCCQBLDmmcdlID_hY_F1UP9spHdlSXTFFg2uha5PHdlSLUFfzOgR_VhMj4WoGxtyZM1BA7XoBuX2DsXengUs_KCnCsPA0b1P3A&_nc_oc=AQmS7ED802bYqm4z-cDg4414x60LK5MyCzD-RUoabylMlHtAMHwGEhjN9twbwkGnwHCOQA0RTzT5pU30AOHFiNSC&_nc_ht=scontent.fubp1-1.fna&oh=f9e3c10bd37f43ed2e4b2f8a7fcd535b&oe=5E1C3877" style="width:100%">
+            <img src="https://scontent.fubp1-1.fna.fbcdn.net/v/t1.0-9/39616320_1810838515638752_7761274549781397504_o.jpg?_nc_cat=104&_nc_eui2=AeHoDrYkvOSBcsHFjbJsJG73nG5CPZtJjIS-iVg-zmmLc7KScOxCxyRQdwuS6ndAjX_j9LGNGcLrSeKd1WeVLeiGRz-51OQjoKbJOlmDj6v5gA&_nc_oc=AQnfiaGngluNIvd_ogwH886QJxwebhi4mbJv8BltS3hQkA8nk35au3E0EJUn_QeRaYk6smplw3aYn7O8_nZjau7v&_nc_ht=scontent.fubp1-1.fna&oh=b43bb7cdf61fa3b6ea72979c777ecfdf&oe=5E5492BF" style="width:100%">
+            <img src="https://scontent.fubp1-1.fna.fbcdn.net/v/t1.0-9/40167822_1823245497731387_1978195811221110784_o.jpg?_nc_cat=104&_nc_eui2=AeE5-DkhX-_XqtO1uxYaB8Kxo600PMkl7x27QZldb9niJRT9WsdpFbuvyU7kHdvI_nJsL8sOt-Trbbxas9GNP3Uk7erGdyJV1wlqLnHHYYkUiw&_nc_oc=AQmDAp414opZ9907EbJOsMGVk8zSmYKcg3SRQJ7tuCYDYSQO_c7mQvu9DTS_0G1BQxwEoZXYDyMXVyW92TaLsYEd&_nc_ht=scontent.fubp1-1.fna&oh=4e4c759102747e7d4a45fbe2d7a35eaa&oe=5E235108" style="width:100%">
+            <img src="https://scontent.fubp1-1.fna.fbcdn.net/v/t1.0-9/68496477_2332011456854786_6215923871908888576_o.jpg?_nc_cat=109&_nc_eui2=AeHY1wBnVPY6OpG30xnF8Xc66-4R1_2L6ZQjp4q-8C-003hrypgAH-WOhVDqduEplgOiPVA0IaeHDTIsDClo9rhjH8tbQ9mkHFoDnJCJFQ3L3A&_nc_oc=AQkFKWtF6Qf9qeh_Z1qqCrkU0Kp8xVGiDJHocNjnRNvH_dHYueICmhVaDbIOwnPH82pJ_N2PsKZ_TKqAQ1hyYHze&_nc_ht=scontent.fubp1-1.fna&oh=ffbe5b777c9d4e0c8074fbc37008f4e3&oe=5E543E62" style="width:100%">
+          </div>
+        
+          <div class="w3-half">
+            <img src="https://scontent.fubp1-1.fna.fbcdn.net/v/t1.0-9/40337225_1823248451064425_6864573377961525248_o.jpg?_nc_cat=103&_nc_eui2=AeFsTTxBEZnFO56vONywZ8_ThbejZWPnpXzQXYw4w_YIRDFvqfX_MqBM5fHGLViHTdit3Ocx712uSv397zMzERfLXGhtzVzkA_3buh4U-vaRxA&_nc_oc=AQlcYvPNR3nHRRZtibqs7ecm8_H-BAn5wZvq9A1jiWnlUwZW34wXXhe46jPDVMqCtRQ&_nc_ht=scontent.fubp1-1.fna&oh=f19f6c03a5b756c9c10e985eb98967f9&oe=5E200A86" style="width:100%">
+            <img src="https://scontent.fubp1-1.fna.fbcdn.net/v/t1.0-9/41432788_1837562506299686_7531211134762745856_o.jpg?_nc_cat=101&_nc_eui2=AeFetJtbt4KRBJk3h4uDWV3qde3C1LTZXIF2knheJmXY5nLHyGTNo60fOVCZO7wSTfwQTABr8jzsvGWe6WwA_gZ2CG5oSeQ72UwVZp1V4JV2tg&_nc_oc=AQm-i-j6j0A5YHYqA4zTvy8nvqUZ9ZHt7wcYKuCqU19COmHvGMH4HcP1nuxukf52vSAzVUt_X63PY29F_8PoUzp9&_nc_ht=scontent.fubp1-1.fna&oh=2cf20994e2d47a404869740473a81c15&oe=5E5EA241" style="width:100%">
+            <img src="https://scontent.fubp1-1.fna.fbcdn.net/v/t1.0-9/39628861_1810839638971973_5290845816804605952_o.jpg?_nc_cat=110&_nc_eui2=AeHVCEOC11XAgCE7kc97hxXvqMCFNG77KuXAhVObav5TQWZh9UleK0wQEbvfTj_883dk6XYe0VZczUyQsYg_gant9xzvbhIaJcLcUX5jmoSFng&_nc_oc=AQkQPKRX_X6jZDfK6TRmLpsisyPM_1n94nJQ1ZhKlwFHDYJm0_RMGDdGcLaDDrO9DflSC0DVa14hlpALAoecm-P7&_nc_ht=scontent.fubp1-1.fna&oh=c263cb160e4c95c1a10ebe151858cc32&oe=5E5F6B69" style="width:100%">
+            <img src="https://scontent.fubp1-1.fna.fbcdn.net/v/t1.0-9/39558114_1810841255638478_1594714923143790592_o.jpg?_nc_cat=110&_nc_eui2=AeH-pb9GMzV1qr21MeQkAWg_7-5dvrVI2dL4xksw3jd9Pn2JrFpFxl8NObGkWkIvL8sl4o_OMg-hTUvkEVZdAGquZODsTP3TlvPBcVjJ93ZCMg&_nc_oc=AQkejA5WG1cDJ7VeQhjTpCW5IXjdWCsDzj8rV-VAlpROegIeUYGrH-o6gyYY8Q8C0Y1F4U-qT5wSV8rsnRGFkplQ&_nc_ht=scontent.fubp1-1.fna&oh=931a0dabeb108d8fb8adeeb227fdfb0d&oe=5E5986D0" style="width:100%">
+            <img src="https://scontent.fubp1-1.fna.fbcdn.net/v/t1.0-9/40229420_1823244771064793_2706161333027471360_o.jpg?_nc_cat=110&_nc_eui2=AeEPa1s8-c8bWKBHwlSz5Uj1yizKzf7pN74BEN5g0jK1m8DLHtaK-mAIiMUgpsX8QlJKJk1APJSzuIp-Nv0hBeemLkb1RgEys7JrTmkq12BfzA&_nc_oc=AQnYvzo737KPN-hVzCznhwNNDdHtUCwm8jbw5lrwGcjFZMsT2P1dTGzN-hpFFtm2fSOwMz9Gd87lhWUCJ6xQcOMC&_nc_ht=scontent.fubp1-1.fna&oh=fa224284cce5c0a8e205e27467e21f4f&oe=5E655ABE" style="width:100%">
+            <img src="https://scontent.fubp1-1.fna.fbcdn.net/v/t1.0-9/68877075_2331879470201318_1599802616848580608_o.jpg?_nc_cat=111&_nc_eui2=AeERy1ZeusWnchsgUtG1T5OYGjfJoyYbahwr8MmWUFqplSZcWt3YMlqsDcwf7jLh-fS_eTCFBAR0GskseAFbLZKWIoTbe5HMjn178tcWtegFvQ&_nc_oc=AQldVQLtsRmfxVBmFPHcfZpjyoeFKwvLgnELflcdjAKXUUldjJ_55rOxGoApRa-e96OCE2bRoJiiMzjbIks-dXCX&_nc_ht=scontent.fubp1-1.fna&oh=ad3d923a99cb651198f7ced7d1d9c420&oe=5E554549" style="width:100%">
+          </div>
+        </div>
+          
+        <!-- End Page Content -->
+        </div>
+
+
+
+</body>
 </html>
